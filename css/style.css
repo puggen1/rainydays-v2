@@ -94,6 +94,15 @@ nav a {
   max-width: 80%;
   max-height: 81px;
 }
+/* makes the logo not have the a attributes on the other elements */
+.logo a {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+.logo a:hover {
+  background-color: transparent;
+}
 #right-header {
   display: flex;
   align-items: center;
@@ -164,14 +173,13 @@ nav a {
   max-height: 100%;
   width: 100%;
 }
-.box1,
-.box3 {
+.box {
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 100%;
 }
-.box2 {
+.box-hidden {
   display: none;
 }
 .cta {
@@ -251,7 +259,20 @@ input[type="email"]:focus {
   outline: none;
   border: solid 1px #000;
 }
-
+/* collection page */
+.products {
+  display: flex;
+  flex-direction: column;
+  background-color: #009788;
+  padding: 20px;
+}
+/* to put the cta and price on same line*/
+.bot-text {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
 /*for bigger screens, with these two types, the site works well on smaller mobile devices,
  and laptops to desktops. sizes in the middel(just over 600px, should have one more version
   because some elements gets broken, i will not make tablet version here*/
@@ -370,9 +391,14 @@ input[type="email"]:focus {
     grid-area: feat;
     border-top: solid 1px #67dffb;
   }
-  .box1,
-  .box2,
-  .box3 {
+  /*needs styling here because is not visivle on mobile */
+  .box-hidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .box,
+  .box-hidden {
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding-bottom: 10px;
@@ -385,12 +411,7 @@ input[type="email"]:focus {
     height: 100%;
     width: 100%;
   }
-  /*needs styling here because is not visivle on mobile */
-  .box2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+
   .index-about {
     grid-area: about;
     margin: 20px auto;
