@@ -140,8 +140,10 @@ nav a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+/* added collection.html's bot text here also */
 .collection a,
-.bestseller a {
+.bestseller a,
+.bot-text a {
   padding: 7px 30px;
 }
 /*featured*/
@@ -264,7 +266,6 @@ input[type="email"]:focus {
   display: flex;
   flex-direction: column;
   background-color: #009788;
-  padding: 20px;
 }
 /* to put the cta and price on same line*/
 .bot-text {
@@ -272,6 +273,10 @@ input[type="email"]:focus {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
+}
+.box {
+  padding: 20px;
+  border-bottom: solid 1px #67dffb;
 }
 /*for bigger screens, with these two types, the site works well on smaller mobile devices,
  and laptops to desktops. sizes in the middel(just over 600px, should have one more version
