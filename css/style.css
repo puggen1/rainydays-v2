@@ -1,0 +1,416 @@
+body {
+  max-width: 100%;
+  margin: 0;
+}
+a,
+h1,
+h2,
+h3,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+h3,
+button {
+  font-weight: 600;
+}
+a {
+  background: #f68c64;
+  border: 2px solid #f68c64;
+  box-sizing: border-box;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  text-decoration: none;
+  color: #383838;
+  padding: 5px 10px;
+  font-weight: 600;
+  font-size: 3vw;
+}
+p,
+::placeholder {
+  font-family: "source Sans Pro", sans-serif;
+}
+::placeholder {
+  font-size: 1.2vh;
+}
+
+/* all header styling */
+header {
+  position: relative;
+  background-color: #009788;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  align-items: center;
+  justify-items: center;
+  padding-top: 10px;
+  height: 81px;
+  overflow: visible;
+}
+header i {
+  font-size: 25px;
+  padding: 0px;
+}
+/* navigation */
+nav {
+  display: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding: 10px 0;
+}
+/*hidden checkbox for hamburger menu */
+#hamnav {
+  display: none;
+}
+/* showing the navigation over main with z index */
+#hamnav:checked ~ nav {
+  display: block;
+  background-color: white;
+  position: absolute;
+  width: 80%;
+  top: 100%;
+  z-index: 1;
+  text-align: center;
+}
+
+nav a {
+  background-color: white;
+  border: none;
+  border-radius: 0px;
+  color: black;
+  box-shadow: none;
+}
+.menu {
+  grid-column: 1/2;
+}
+.logo {
+  grid-column: 2/3;
+  display: flex;
+  justify-content: center;
+}
+.logo img {
+  max-width: 80%;
+  max-height: 81px;
+}
+#right-header {
+  display: flex;
+  align-items: center;
+}
+.cart {
+  margin-left: 10px;
+}
+
+/* collection and bestseller*/
+/* added grid on the elements to get rid of a white underline i was struggling with */
+.collection,
+.bestseller {
+  display: grid;
+  position: relative;
+}
+.collection img,
+.bestseller img {
+  max-width: 100%;
+  max-height: 100%;
+}
+/* splitting the content into top and bottom to give them diffrent top value*/
+.content-top,
+.content-bot {
+  position: absolute;
+  text-align: center;
+}
+/* using transform to  make text over picture stay in same spot over diffrent sizes */
+.content-top {
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content-bot {
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.collection a,
+.bestseller a {
+  padding: 7px 30px;
+}
+/*featured*/
+.featured {
+  display: flex;
+  border-bottom: solid 1px #67dffb;
+  padding-bottom: 40px;
+}
+
+.color-box {
+  background-color: #009788;
+}
+
+.color-box h3 {
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+}
+.text-box {
+  display: flex;
+  font-size: 1.5vh;
+}
+.price {
+  margin-left: 15px;
+}
+
+.featured img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+.box1,
+.box3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+.box2 {
+  display: none;
+}
+.cta {
+  margin: 10px;
+  align-self: center;
+}
+/*about us index (and text align for footer)*/
+.index-about,
+footer {
+  text-align: center;
+}
+.index-about p {
+  padding: 5px 50px;
+}
+/* made the cta an inline-block here so it would accept margin */
+.index-about a {
+  display: inline-block;
+  margin: 10px;
+}
+/*footer*/
+footer {
+  background-color: #009788;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "location social newsletter"
+    "location social newsletter"
+    ". info .";
+}
+#location {
+  grid-area: location;
+}
+#location p {
+  margin: 5px 0;
+}
+.social-media {
+  grid-area: social;
+  font-size: 3vw;
+}
+.social-media i {
+  font-size: 4vw;
+}
+.newsletter {
+  grid-area: newsletter;
+  padding: 20px 0;
+}
+#location,
+.social-media,
+.newsletter {
+  margin: auto;
+}
+#info {
+  grid-area: info;
+}
+/*for now only used on footer  will probably be a global element later*/
+form > * {
+  display: block;
+  margin: 0 auto;
+}
+button {
+  border: solid 1px #f68c64;
+  background: #f68c64;
+  border-radius: 20px;
+  padding: 5px 25px;
+  color: black;
+}
+input[type="email"] {
+  display: inline-block;
+  border: solid 1px white;
+
+  border-radius: 5px;
+  width: 90px;
+  margin: 0 0 10px 0;
+}
+input[type="email"]:focus {
+  outline: none;
+  border: solid 1px #000;
+}
+
+/*for bigger screens, with these two types, the site works well on smaller mobile devices,
+ and laptops to desktops. sizes in the middel(just over 600px, should have one more version
+  because some elements gets broken, i will not make tablet version here*/
+@media screen and (min-width: 600px) {
+  /*making the a buttons more responsive on a pc with mouse */
+  a {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  a:hover {
+    background-color: #f68c64;
+  }
+  nav a:hover {
+    color: white;
+    background-color: #009788;
+  }
+  p,
+  a {
+    font-size: 1vw;
+  }
+  button:hover,
+  .search:hover,
+  .cart:hover {
+    cursor: pointer;
+  }
+  /*hide mobile nav*/
+  .mobilenav,
+  #hamnav,
+  .fa-bars {
+    display: none;
+  }
+  header {
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 10px auto 10px;
+    grid-template-areas:
+      "logo . . ."
+      "logo . nav right"
+      "logo . . .";
+    height: auto;
+    min-height: 80px;
+    margin-bottom: 30px;
+  }
+  nav {
+    display: block;
+    grid-area: nav;
+  }
+  nav a {
+    white-space: nowrap;
+    background-color: #009788;
+  }
+  /*styling the nav */
+  ul {
+    display: flex;
+  }
+  li {
+    border-right: solid 1px black;
+    padding: 0 15px;
+  }
+  li:last-child {
+    border: none;
+  }
+  .logo {
+    grid-area: logo;
+  }
+  #right-header {
+    grid-area: right;
+  }
+  .search {
+    border: solid 1px black;
+    padding: 5px 100px 2px 5px;
+  }
+
+  .cart {
+    margin-left: 100px;
+  }
+  /* making the layout for big screens */
+  main {
+    display: grid;
+    grid-template-columns: 50px auto auto auto auto auto auto 50px;
+    grid-template-areas:
+      ". col col col best best best ."
+      ". feat feat feat feat feat feat ."
+      ". . . about about . . .";
+  }
+  .collection {
+    grid-area: col;
+  }
+  .bestseller {
+    grid-area: best;
+  }
+  /* making the image become the same size this makes collection image wrong ratio but it is not noticable here, if i find a better solution i will change */
+  .collection,
+  .bestseller {
+    max-width: 100%;
+  }
+  .collection img,
+  .bestseller img {
+    width: 100%;
+    height: 100%;
+  }
+  /* content on collection and bestseller moved */
+  .content-top {
+    top: 5%;
+  }
+  .content-bot {
+    top: 15%;
+  }
+  .featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10%;
+    /*padding on bottom already set to right number on mobile */
+    padding-top: 40px;
+    padding-left: 130px;
+    padding-right: 130px;
+    margin-top: 40px;
+    grid-area: feat;
+    border-top: solid 1px #67dffb;
+  }
+  .box1,
+  .box2,
+  .box3 {
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-bottom: 10px;
+    max-width: 100%;
+  }
+
+  .color-box {
+    border-radius: 20px 20px 0 0;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+  }
+  /*needs styling here because is not visivle on mobile */
+  .box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .index-about {
+    grid-area: about;
+    margin: 20px auto;
+    border-left: solid 1px #67dffb;
+    border-right: solid 1px #67dffb;
+  }
+
+  footer {
+    grid-template-columns: 0.5fr 1fr 0.5fr 1fr 0.5fr;
+    grid-template-rows: 50px auto auto;
+    grid-template-areas:
+      ". . . . ."
+      "location . social . newsletter"
+      ". . info . .";
+    align-items: end;
+  }
+  input[type="email"] {
+    width: 120px;
+  }
+  ::placeholder {
+    font-size: 1.3vh;
+  }
+}
