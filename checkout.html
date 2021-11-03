@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Checkout page, the last step before your jacket is on the way">
+    <title>Checkout | Rainydays</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/17aae2f01b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <label for="hamnav" class="mobilenav">
+            <i class="fas fa-bars"></i>
+        </label>
+        <input type="checkbox" id="hamnav">
+        <nav>
+            <ul>
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#">Collection</a></li>
+                     <li><a href="#">About Us</a></li>
+                     <li><a href="#">Contact</a></li>
+                 </ul>
+             </nav>
+        <div class="logo">
+            <img src="images/RainyDays_Logo.png" alt="Rainydays Logo">
+        </div>
+        <div id="right-header">
+            <div class="search">
+                <img src="images/search.svg" alt="search icon">
+            </div>
+            <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>Checkout</h1>
+        <div class="product-banner">
+            <img href="#">
+            <p>Product one</p>
+            <img href="#">
+            <p>240$</p>
+            <!--and icon-->
+        </div>
+        <article>
+            <h2>Card information</h2>
+            <form class="card">
+                <input type="text" id="cardname" placeholder="Name on card">
+                <input type="number" id="cardnumber" placeholder="card number">
+                <input type="number" id="expired" placeholder="expired">
+                <input type="number" id="cvv" placeholder="cvv">
+                <input type="checkbox" id="save">
+                <label>
+                    <p>Save card info</p>
+                </label>
+            </form>
+        </article>
+        <article>
+            <!--remember to add link to form..-->
+            <h2>Delivery information</h2>
+            <form class="delivery">
+                <input type="text" id="name" placeholder="Recivers name">
+                <input type="email" id="email" placeholder="Recivers Email">
+                <p>*To send recipt and delivery information</p>
+                <input type="text" id="adress" placeholder="Delivery Adress">
+                <input type="number" id="zip" placeholder="Zip Code">
+                <input type="text" id="city" placeholder="City">
+            </form>
+            <div class="cta">
+                <a href="#"> Order</a>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div id="location">
+           <p>Find us:</p>
+             <p>Bergen,</p>
+             <p>Norway</p>
+        </div>
+        <div class="social-media">
+            <p>Visit us on social media</p>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="newsletter">
+            <form method="get" action="#">
+                <input type="email" placeholder="Sign up for newsletter">
+                <button> Join</button>
+            </form>
+        </div>
+        <p id="info">My school Project 2021</p>
+
+    </footer>
+</body>
+</html>
