@@ -283,18 +283,67 @@ input[type="email"]:focus {
   flex-direction: column;
   background-color: #009788;
 }
-/* *produts* to put the cta and price on same line*/
+/* *collection* to put the cta and price on same line*/
 
 .products .box {
   padding: 20px;
   border-bottom: solid 1px #67dffb;
 }
-/*make the product site  buttons a little bit bigger */
+/*make the collection site  buttons a little bit bigger */
 .products a {
   padding: 5px 30px;
 }
 .buy {
   display: none;
+}
+/* jacket site */
+.jacket .box {
+  background-color: #009788;
+}
+/* buttons on jacket site*/
+input[type="radio"] {
+  opacity: 0;
+}
+
+span {
+  top: 5px;
+  position: absolute;
+  width: 35px;
+  background-color: #fff;
+  border: solid 3px #f68c64;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 23px;
+  line-height: 35px;
+}
+
+form,
+.buttons {
+  display: flex;
+}
+form,
+label,
+span {
+}
+label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin: 0 15px;
+}
+label:first-child {
+  margin-left: 0;
+}
+
+span:hover {
+  opacity: 1;
+  background-color: #f68c64;
+  color: white;
+}
+
+input[type="radio"]:checked ~ span {
+  color: #fff;
+  background-color: #f68c64;
 }
 /*for bigger screens, with these two types, the site works well on smaller mobile devices,
  and laptops to desktops. sizes in the middel(just over 600px, should have one more version
@@ -483,9 +532,7 @@ input[type="email"]:focus {
       "name price"
       "cta add";
   }
-  .buttons {
-    display: flex;
-  }
+
   .buy {
     display: inline;
     box-sizing: border-box;

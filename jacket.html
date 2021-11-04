@@ -21,7 +21,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Collection</a></li>
+                <li><a href="collection.html">Collection</a></li>
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -41,16 +41,34 @@
         </div>
     </header>
     <main>
-        <section class="product">
-            <!--might need another name here-->
-            <div class="text-image">
-                <h1>Product one</h1>
-                <img src="#">
+        <section class="jacket">
+            <div class="box">
+                    <h1>Product one</h1>
+                    <img src="/images/jakke1.png">
             </div>
-            <div class="action">
-                <h2>240$</h2>
+            <h2>240$</h2>
+            <div class="buttons">
+                
                 <div class="size">
-                    <!--size comes here, will add-->
+                    <form action="checkout.html" method="get"> 
+
+         
+
+                        <label for="radio1" id="small"> <input type="radio" id="radio1" value="small" name="size"><span>S</span></label> 
+                
+                         
+                
+                       <label for="radio2" id="medium"> <input type="radio" checked="checked" id="radio2" value="medium" name="size"> <span>M</span></label> 
+                
+                        
+                
+                       <label for="radio3" id="large"> <input type="radio" id="radio3" value="large" name="size"> <span>L</span></label> 
+                
+                         
+                
+                       <label for="radio4" id="xlarge"><input type="radio" id="radio4" value="xlarge" name="size"><span>XL</span></label> 
+                
+                    </form> 
                 </div>
                 <div class="cta">
                     <a href="checkout.html">Add to cart</a>
