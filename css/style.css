@@ -137,6 +137,7 @@ nav a {
   height: 100%;
   width: 100%;
 }
+
 /* splitting the content into top and bottom to give them diffrent top value*/
 .content-top,
 .content-bot {
@@ -187,6 +188,16 @@ nav a {
   max-width: 100%;
   max-height: 100%;
   width: 100%;
+}
+/* small image for jacket see also */
+.small {
+  display: contents;
+}
+.small img {
+  max-height: 80%;
+  max-width: 80%;
+
+  background-color: #009788;
 }
 .box {
   display: flex;
@@ -300,13 +311,39 @@ input[type="email"]:focus {
 .jacket .box {
   background-color: #009788;
 }
+.jacket h1 {
+  background-color: #009788;
+  margin: 0;
+  padding: 20px 0;
+}
+.price-cta {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+}
+.price-cta .cta {
+  grid-column: 1/3;
+}
+.size {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: flex-start;
+}
+.cta a {
+  padding: 10px 30px;
+}
+.jacket-info p {
+  margin: 0 auto;
+  max-width: 400px;
+}
 /* buttons on jacket site*/
 input[type="radio"] {
   opacity: 0;
+  margin: 0;
+  height: 0px;
+  width: 0px;
 }
 
 span {
-  top: 5px;
   position: absolute;
   width: 35px;
   height: 35px;
@@ -316,21 +353,22 @@ span {
   text-align: center;
   font-size: 23px;
   line-height: 35px;
+  margin: 0;
+  max-width: 100%;
 }
 
-form,
-.buttons {
+.jacket form {
   display: flex;
+  height: 40px;
+  margin-top: 10px;
 }
-form,
-label,
-span {
-}
-label {
+.jacket label {
   display: block;
   position: relative;
   cursor: pointer;
-  margin: 0 15px;
+  margin: 0 5px;
+  max-width: 100%;
+  width: 100%;
 }
 label:first-child {
   margin-left: 0;
@@ -541,5 +579,27 @@ input[type="radio"]:checked ~ span {
     height: auto;
   }
   .buy a {
+  }
+  /*jacket site using grid area */
+  .jacket {
+    margin: 50px;
+    grid-column: 2/8;
+    display: grid;
+    grid-template-areas:
+      "image image image . name name name"
+      "image image image . info info info" "image image image . info info info"
+      "image image image . info info info" "image image image . cta cta cta";
+  }
+  .jacket .box {
+    grid-area: image;
+  }
+  .jacket h1 {
+    grid-area: name;
+  }
+  .jacket .jacket-info {
+    grid-area: info;
+  }
+  .jacket .price-cta {
+    grid-area: cta;
   }
 }
