@@ -328,7 +328,8 @@ input[type="email"]:focus {
   grid-row: 1/2;
   align-self: flex-start;
 }
-.cta a {
+.cta a,
+.buy a {
   padding: 10px 30px;
 }
 .jacket-info p {
@@ -551,7 +552,9 @@ input[type="radio"]:checked ~ span {
     flex-direction: column;
     margin-bottom: 150px;
   }
-
+  .buttons {
+    display: flex;
+  }
   .products {
     background-color: transparent;
     display: grid;
@@ -578,11 +581,12 @@ input[type="radio"]:checked ~ span {
     grid-area: add;
     height: auto;
   }
-  .buy a {
-  }
+
   /*jacket site using grid area */
   .jacket {
-    margin: 50px;
+    padding: 50px;
+    background-color: #f5f5f5;
+    border: solid 1px black;
     grid-column: 2/8;
     display: grid;
     grid-template-areas:
@@ -592,9 +596,15 @@ input[type="radio"]:checked ~ span {
   }
   .jacket .box {
     grid-area: image;
+    border-radius: 0px;
+    padding: 0px;
+    justify-content: center;
   }
   .jacket h1 {
     grid-area: name;
+    /*i dont know if i did this or chrome, but it set h1 to be same size as h2 so had to edit */
+    font-size: 2em;
+    background-color: #f5f5f5;
   }
   .jacket .jacket-info {
     grid-area: info;
