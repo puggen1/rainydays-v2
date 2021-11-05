@@ -27,15 +27,16 @@ a {
   text-decoration: none;
   color: #383838;
   font-weight: 600;
-  font-size: 3vw;
+  font-size: 4vw;
   padding: 5px 10px;
 }
-.buy a {
+.buy a,
+.price-cta a {
   border: solid 2px #01b844;
-}
-.buy a:hover {
   background-color: #01b844;
+  color: white;
 }
+
 p,
 ::placeholder {
   font-family: "source Sans Pro", sans-serif;
@@ -178,7 +179,7 @@ nav a {
 }
 .text-box {
   display: flex;
-  font-size: 1.5vh;
+  font-size: 4vw;
 }
 .price {
   margin-left: 15px;
@@ -247,7 +248,7 @@ footer {
 }
 .social-media {
   grid-area: social;
-  font-size: 3vw;
+  font-size: 4vw;
 }
 .social-media i {
   font-size: 4vw;
@@ -390,8 +391,11 @@ input[type="radio"]:checked ~ span {
   because some elements gets broken, i will not make tablet version here*/
 @media screen and (min-width: 600px) {
   /*making the a buttons more responsive on a pc with mouse */
-  a {
+  a,
+  .cta a,
+  .buy a {
     background-color: rgba(255, 255, 255, 0);
+    color: #383838;
   }
   a:hover {
     background-color: #f68c64;
@@ -399,6 +403,10 @@ input[type="radio"]:checked ~ span {
   nav a:hover {
     color: white;
     background-color: #009788;
+  }
+  .buy a:hover,
+  .price-cta a:hover {
+    background-color: #01b844;
   }
   p,
   a {
@@ -583,16 +591,29 @@ input[type="radio"]:checked ~ span {
   }
 
   /*jacket site using grid area */
+
+  /*custom main id to edit the layout */
+  #jacket {
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    grid-template-areas:
+      ". maincontent maincontent ."
+      ". seealso seealso ."
+      ". featured featured .";
+  }
+
   .jacket {
+    grid-area: maincontent;
     padding: 50px;
     background-color: #f5f5f5;
     border: solid 1px black;
-    grid-column: 2/8;
+    grid-column: 2/4;
     display: grid;
     grid-template-areas:
       "image image image . name name name"
-      "image image image . info info info" "image image image . info info info"
-      "image image image . info info info" "image image image . cta cta cta";
+      "image image image . info info info"
+      "image image image . info info info"
+      "image image image . info info info"
+      "image image image . cta cta cta";
   }
   .jacket .box {
     grid-area: image;
@@ -602,14 +623,39 @@ input[type="radio"]:checked ~ span {
   }
   .jacket h1 {
     grid-area: name;
-    /*i dont know if i did this or chrome, but it set h1 to be same size as h2 so had to edit */
+    /*i dont know if i did this or chrome, but it set h1 to be same size as h2 so had to edit it to the standar */
     font-size: 2em;
     background-color: #f5f5f5;
   }
+  /* grid areas for jacket section */
   .jacket .jacket-info {
     grid-area: info;
   }
   .jacket .price-cta {
     grid-area: cta;
+  }
+  #jacket .featured {
+    grid-area: featured;
+  }
+  #jacket h3 {
+    grid-area: seealso;
+  }
+  /* grid area for price-cta (a subsection in jacket) */
+  .price-cta {
+    grid-template-columns: 1fr 1fr;
+  }
+  .price-cta h2 {
+    grid-column: 2/3;
+  }
+  .price-cta .cta {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .size {
+    grid-row: 2/3;
+  }
+  /* size buttons need to be grey instead of white on this site */
+  span {
+    background-color: #f5f5f5;
   }
 }
