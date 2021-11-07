@@ -214,7 +214,6 @@ nav a {
 .buy {
   margin: 10px auto;
   align-self: center;
-  padding: 5px 10px;
   height: auto;
 }
 /*about us index (and text align for footer)*/
@@ -349,14 +348,14 @@ input[type="radio"] {
 
 span {
   position: absolute;
-  width: 35px;
-  height: 35px;
+  width: 3vw;
+  height: 3vw;
   background-color: #fff;
   border: solid 3px #f68c64;
   border-radius: 50%;
   text-align: center;
   font-size: 23px;
-  line-height: 35px;
+  line-height: 3vw;
   margin: 0;
   max-width: 100%;
 }
