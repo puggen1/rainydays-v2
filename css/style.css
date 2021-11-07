@@ -11,6 +11,7 @@ h1,
 h2,
 h3,
 button {
+  /*might add label here, but need to do some tweaking on things then */
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
@@ -335,6 +336,7 @@ input[type="email"]:focus {
 }
 .jacket-info p {
   margin: 0 auto;
+  padding: 0px 20px;
   max-width: 400px;
 }
 /* buttons on jacket site*/
@@ -386,6 +388,96 @@ input[type="radio"]:checked ~ span {
   color: #fff;
   background-color: #f68c64;
 }
+/*checkout page */
+.product-banner img {
+  width: 10%;
+  height: 10%;
+}
+.product-banner {
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-top: solid 1px #67dffb;
+  border-bottom: solid 1px #67dffb;
+  align-items: center;
+}
+.product-banner i {
+  font-size: 30px;
+}
+.card {
+  margin: 0 10%;
+  display: grid;
+  gap: 3px;
+  grid-template-columns: 1fr 0.1fr 1fr;
+  grid-template-areas:
+    "name . ."
+    "number . ."
+    "exp . ."
+    "cvv save lab";
+  align-items: center;
+}
+.card input,
+.delivery input {
+  border: solid 1px #000;
+}
+/* grid area for first form */
+#cardname {
+  grid-area: name;
+}
+#cardnumber {
+  grid-area: number;
+}
+#expired {
+  grid-area: exp;
+}
+#cvv {
+  grid-area: cvv;
+}
+#save {
+  grid-area: save;
+}
+.card label {
+  grid-area: lab;
+}
+.delivery {
+  margin: 0 10%;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 1fr;
+  grid-template-areas:
+    "name name . "
+    "email email info"
+    "adress adress ."
+    "zip . .  "
+    "city . ."
+    ". order . ";
+}
+.delivery input {
+  margin: 0px;
+}
+#name {
+  grid-area: name;
+}
+#email {
+  grid-area: email;
+  border-radius: 0px;
+  padding: 1px 0;
+}
+.delivery p {
+  grid-area: info;
+}
+#adress {
+  grid-area: adress;
+}
+#zip {
+  grid-area: zip;
+}
+#city {
+  grid-area: city;
+}
+.delivery button {
+  grid-area: order;
+}
+
 /*for bigger screens, with these two types, the site works well on smaller mobile devices,
  and laptops to desktops. sizes in the middel(just over 600px, should have one more version
   because some elements gets broken, i will not make tablet version here*/
@@ -608,12 +700,17 @@ input[type="radio"]:checked ~ span {
     border: solid 1px black;
     grid-column: 2/4;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 0.5fr 1fr 1fr 1fr;
     grid-template-areas:
       "image image image . name name name"
       "image image image . info info info"
       "image image image . info info info"
       "image image image . info info info"
       "image image image . cta cta cta";
+  }
+  .jacket img {
+    max-width: 80%;
+    max-height: 80%;
   }
   .jacket .box {
     grid-area: image;
