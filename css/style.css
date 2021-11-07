@@ -267,7 +267,7 @@ footer {
   grid-area: info;
 }
 /*for now only used on footer  will probably be a global element later*/
-form > * {
+footer form > * {
   display: block;
   margin: 0 auto;
 }
