@@ -405,7 +405,7 @@ input[type="radio"]:checked ~ span {
   font-size: 30px;
 }
 .card {
-  margin: 0 10%;
+  margin: 0 5%;
   display: grid;
   gap: 3px;
   grid-template-columns: 1fr 0.1fr 1fr;
@@ -440,19 +440,22 @@ input[type="radio"]:checked ~ span {
   grid-area: lab;
 }
 .delivery {
-  margin: 0 10%;
+  margin: 0 5%;
+  gap: 3px;
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr 1fr;
+  grid-template-columns: 0.2fr 0.7fr 1fr;
   grid-template-areas:
-    "name name . "
-    "email email info"
-    "adress adress ."
+    "name . . "
+    "email info info"
+    "adress . ."
     "zip . .  "
     "city . ."
     ". order . ";
 }
 .delivery input {
   margin: 0px;
+  max-height: 19px;
+  padding: 2px 2px;
 }
 #name {
   grid-area: name;
@@ -460,9 +463,9 @@ input[type="radio"]:checked ~ span {
 #email {
   grid-area: email;
   border-radius: 0px;
-  padding: 1px 0;
+  width: auto;
 }
-.delivery p {
+.delivery label {
   grid-area: info;
 }
 #adress {
