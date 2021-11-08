@@ -713,6 +713,7 @@ input[type="radio"]:checked ~ span {
     background-color: white;
     padding: 0px;
     border-bottom: unset;
+    padding-bottom: 10px;
   }
   .proucts .text-box {
     grid-template-columns: 1fr 1fr;
