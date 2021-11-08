@@ -165,7 +165,8 @@ nav a {
 }
 /*featured*/
 .featured {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   border-bottom: solid 1px #67dffb;
   padding-bottom: 40px;
 }
@@ -309,6 +310,14 @@ input[type="email"]:focus {
   display: none;
 }
 /* jacket site */
+/*setting right grid on jacket*/
+#jacket .featured {
+  grid-template-rows: auto auto;
+}
+#jacket h3 {
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
 .jacket .box {
   background-color: #009788;
 }
@@ -596,6 +605,7 @@ input[type="radio"]:checked ~ span {
   .featured {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
     grid-gap: 10%;
     /*padding on bottom already set to right number on mobile */
     padding-top: 40px;
@@ -604,6 +614,11 @@ input[type="radio"]:checked ~ span {
     margin-top: 40px;
     grid-area: feat;
     border-top: solid 1px #67dffb;
+  }
+  .featured h3,
+  #jacket h3 {
+    grid-row: 1/2;
+    grid-column: 1/4;
   }
   /*needs styling here because is not visivle on mobile */
   .box-hidden {
@@ -691,7 +706,6 @@ input[type="radio"]:checked ~ span {
     grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
     grid-template-areas:
       ". maincontent maincontent ."
-      ". seealso seealso ."
       ". featured featured .";
   }
 
@@ -726,7 +740,7 @@ input[type="radio"]:checked ~ span {
     font-size: 2em;
     background-color: #f5f5f5;
   }
-  /* grid areas for jacket section */
+  /* grid areas for jacket section, and specific styling */
   .jacket .jacket-info {
     grid-area: info;
   }
@@ -734,11 +748,16 @@ input[type="radio"]:checked ~ span {
     grid-area: cta;
   }
   #jacket .featured {
+    background-color: #f5f5f5;
+    border: solid 1px #000;
     grid-area: featured;
+    padding: 10px 10px 75px 10px;
   }
-  #jacket h3 {
-    grid-area: seealso;
+  #jacket .box,
+  #jacket .box-hidden {
+    box-shadow: none;
   }
+
   /* grid area for price-cta (a subsection in jacket) */
   .price-cta {
     grid-template-columns: 1fr 1fr;
