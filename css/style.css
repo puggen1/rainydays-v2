@@ -494,6 +494,28 @@ input[type="radio"]:checked ~ span {
 .delivery button {
   grid-area: order;
 }
+/* checkout complete */
+#checkout-complete {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+#checkout-complete img {
+  max-width: 200px;
+  max-height: 200px;
+}
+#complete-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#complete-info button {
+  background-color: transparent;
+  border: solid 1px black;
+  border-radius: 0px;
+}
 
 /*for bigger screens, with these two types, the site works well on smaller mobile devices,
  and laptops to desktops. sizes in the middel(just over 600px, should have one more version
