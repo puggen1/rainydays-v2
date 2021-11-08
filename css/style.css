@@ -32,7 +32,8 @@ a {
   padding: 5px 10px;
 }
 .buy a,
-.price-cta a {
+.price-cta a,
+#checkout button {
   border: solid 2px #01b844;
   background-color: #01b844;
   color: white;
@@ -422,7 +423,7 @@ input[type="radio"]:checked ~ span {
     "name . ."
     "number . ."
     "exp . ."
-    "cvv save lab";
+    "cvv save save";
   align-items: center;
 }
 .card input,
@@ -442,8 +443,10 @@ input[type="radio"]:checked ~ span {
 #cvv {
   grid-area: cvv;
 }
-#save {
+.save {
   grid-area: save;
+  display: flex;
+  align-items: center;
 }
 .card label {
   grid-area: lab;
@@ -457,8 +460,8 @@ input[type="radio"]:checked ~ span {
     "name name . . "
     "email email info info"
     "adress adress . ."
-    "zip . . ."
-    "city . . ."
+    "small . . ."
+    "small . . ."
     ". order order .";
 }
 .delivery input {
@@ -482,11 +485,11 @@ input[type="radio"]:checked ~ span {
 #adress {
   grid-area: adress;
 }
-#zip {
-  grid-area: zip;
-}
-#city {
-  grid-area: city;
+.short {
+  grid-area: small;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
 }
 .delivery button {
   grid-area: order;
@@ -511,7 +514,8 @@ input[type="radio"]:checked ~ span {
     background-color: #009788;
   }
   .buy a:hover,
-  .price-cta a:hover {
+  .price-cta a:hover,
+  #checkout button:hover {
     background-color: #01b844;
   }
   p,
@@ -787,7 +791,16 @@ input[type="radio"]:checked ~ span {
     margin-top: 0px;
   }
   /* checkout page */
+  .product-banner {
+    box-sizing: border-box;
+    max-height: 100px;
+  }
+  .product-banner img {
+    max-height: 80px;
+    max-width: 80px;
+  }
   #checkout {
+    gap: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -807,6 +820,11 @@ input[type="radio"]:checked ~ span {
   #checkout input {
     background-color: #f5f5f5;
     width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+  }
+  #checkout #save {
+    width: 13px;
   }
   #checkout input::placeholder {
     color: #000;
@@ -814,11 +832,28 @@ input[type="radio"]:checked ~ span {
   .card {
     max-width: 75%;
     margin: 0 auto;
-    grid-template-columns: 1fr 1fr 0.1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-      "name number save lab"
-      "exp cvv . .";
+      "name number save"
+      "exp cvv .";
+  }
+  .delivery {
+    margin: 0 auto;
+    max-width: 75%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "name email info"
+      "adress small ."
+      ".  order .";
+    margin-bottom: 20px;
+  }
+  .card,
+  .delivery {
     row-gap: 20px;
+    column-gap: 50px;
+  }
+  .short {
+    flex-direction: row;
     column-gap: 50px;
   }
 }
