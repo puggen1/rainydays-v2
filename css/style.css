@@ -135,7 +135,8 @@ nav a {
 }
 .collection img,
 .bestseller img,
-.products img {
+.products img,
+#about-us img {
   max-width: 100%;
   max-height: 100%;
   height: 100%;
@@ -522,7 +523,21 @@ input[type="radio"]:checked ~ span {
   border-radius: 0px;
   padding: 5px 5px;
 }
-
+/*about us */
+.hero {
+  position: relative;
+}
+#about-us p {
+  padding: 5px 10px;
+}
+/* unsure about this 
+#about-us .content-top {
+  height: 10%;
+  width: 100%;
+  top: 15%;
+  
+}
+*/
 /*for bigger screens, with these two types, the site works well on smaller mobile devices,
  and laptops to desktops. sizes in the middel(just over 600px, should have one more version
   because some elements gets broken, i will not make tablet version here*/
@@ -884,5 +899,24 @@ input[type="radio"]:checked ~ span {
   .short {
     flex-direction: row;
     column-gap: 50px;
+  }
+  /*about us */
+  #about-us {
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-areas:
+      "about image1"
+      "goal image2";
+  }
+  #about {
+    grid-area: about;
+  }
+  .hero {
+    grid-area: image1;
+  }
+  #goal {
+    grid-area: goal;
+  }
+  #goal-img {
+    grid-area: image2;
   }
 }
