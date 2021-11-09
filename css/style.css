@@ -136,7 +136,8 @@ nav a {
 .collection img,
 .bestseller img,
 .products img,
-#about-us img {
+#about-us img,
+#contact img {
   max-width: 100%;
   max-height: 100%;
   height: 100%;
@@ -211,7 +212,7 @@ nav a {
   align-items: center;
   max-width: 100%;
 }
-.box-hidden {
+.hidden {
   display: none;
 }
 .cta,
@@ -538,6 +539,19 @@ input[type="radio"]:checked ~ span {
   
 }
 */
+/* contact */
+#contact-us article {
+  border-top: 1px solid #67dffb;
+  border-bottom: 1px solid #67dffb;
+  padding-left: 5px;
+  padding-bottom: 10px;
+}
+#contact-us article a {
+  background-color: transparent;
+  border-color: black;
+  border-radius: 0px;
+  color: black;
+}
 /*for bigger screens, with these two types, the site works well on smaller mobile devices,
  and laptops to desktops. sizes in the middel(just over 600px, should have one more version
   because some elements gets broken, i will not make tablet version here*/
@@ -671,13 +685,13 @@ input[type="radio"]:checked ~ span {
     grid-column: 1/4;
   }
   /*needs styling here because is not visivle on mobile */
-  .box-hidden {
+  .hidden {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .box,
-  .box-hidden {
+  .hidden {
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding-bottom: 10px;
@@ -805,7 +819,7 @@ input[type="radio"]:checked ~ span {
     padding: 10px 10px 75px 10px;
   }
   #jacket .box,
-  #jacket .box-hidden {
+  #jacket .hidden {
     box-shadow: none;
   }
 
@@ -918,5 +932,38 @@ input[type="radio"]:checked ~ span {
   }
   #goal-img {
     grid-area: image2;
+  }
+  /* contact */
+  #contact {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  #contact-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #f5f5f5;
+    align-items: center;
+    justify-items: center;
+  }
+  #contact-us article {
+    max-width: 400px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border: none;
+  }
+
+  #contacy-us img {
+    grid-column: 2/3;
+  }
+  #contact .hidden {
+    border-radius: 0px;
+  }
+  #find-us {
+    background-color: #f5f5f5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
   }
 }
