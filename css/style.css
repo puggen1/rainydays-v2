@@ -429,6 +429,7 @@ input[type="radio"]:checked ~ span {
 .card input,
 .delivery input {
   border: solid 1px #000;
+  padding: 10px;
 }
 /* grid area for first form */
 #cardname {
@@ -466,8 +467,6 @@ input[type="radio"]:checked ~ span {
 }
 .delivery input {
   margin: 0px;
-  max-height: 19px;
-  padding: 2px 2px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -489,10 +488,13 @@ input[type="radio"]:checked ~ span {
   grid-area: small;
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 3px;
 }
 .delivery button {
   grid-area: order;
+  padding: 10px 25px;
+  width: 40%;
+  margin: 0 auto;
 }
 /* checkout complete */
 #checkout-complete {
@@ -512,9 +514,13 @@ input[type="radio"]:checked ~ span {
   text-align: center;
 }
 #complete-info button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   background-color: transparent;
   border: solid 1px black;
   border-radius: 0px;
+  padding: 5px 5px;
 }
 
 /*for bigger screens, with these two types, the site works well on smaller mobile devices,
