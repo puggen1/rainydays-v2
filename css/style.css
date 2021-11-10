@@ -19,6 +19,19 @@ h3,
 button {
   font-weight: 600;
 }
+/*^grouping all elements that needs the same display:grid or flex. except the elements in header or footer or some items found many places.
+it was tricky with elements that had diffrent display on mobile and desktop so removed those
+*/
+header,
+main,
+footer,
+.grid {
+  display: grid;
+}
+.flex,
+.box {
+  display: flex;
+}
 a {
   background: #f68c64;
   border: 2px solid #f68c64;
@@ -52,7 +65,6 @@ label {
 header {
   position: relative;
   background-color: #009788;
-  display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
   align-items: center;
   justify-items: center;
@@ -102,7 +114,6 @@ nav a {
 }
 .logo {
   grid-column: 2/3;
-  display: flex;
   justify-content: center;
 }
 .logo img {
@@ -130,7 +141,6 @@ nav a {
 /* added grid on the elements to get rid of a white underline i was struggling with */
 .collection,
 .bestseller {
-  display: grid;
   position: relative;
 }
 .collection img,
@@ -169,7 +179,6 @@ nav a {
 }
 /*featured*/
 .featured {
-  display: grid;
   grid-template-columns: 1fr 1fr;
   border-bottom: solid 1px #67dffb;
   padding-bottom: 40px;
@@ -184,7 +193,6 @@ nav a {
   margin: 0;
 }
 .text-box {
-  display: flex;
   font-size: 4vw;
 }
 .price {
@@ -207,7 +215,6 @@ nav a {
   background-color: #009788;
 }
 .box {
-  display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 100%;
@@ -237,7 +244,6 @@ footer {
 /*footer*/
 footer {
   background-color: #009788;
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
@@ -331,7 +337,6 @@ input[type="email"]:focus {
   padding: 20px 0;
 }
 .price-cta {
-  display: grid;
   grid-template-columns: 1fr 0.5fr;
 }
 .price-cta .cta {
@@ -374,7 +379,6 @@ span {
 }
 
 .jacket form {
-  display: flex;
   height: 40px;
   margin-top: 10px;
 }
@@ -407,7 +411,6 @@ input[type="radio"]:checked ~ span {
 }
 .product-banner {
   padding: 5px 20px;
-  display: flex;
   justify-content: space-between;
   border-top: solid 1px #67dffb;
   border-bottom: solid 1px #67dffb;
@@ -418,7 +421,6 @@ input[type="radio"]:checked ~ span {
 }
 .card {
   margin: 0 5%;
-  display: grid;
   gap: 3px;
   grid-template-columns: 1fr 0.1fr 1fr;
   grid-template-areas:
@@ -448,7 +450,6 @@ input[type="radio"]:checked ~ span {
 }
 .save {
   grid-area: save;
-  display: flex;
   align-items: center;
 }
 .card label {
@@ -457,7 +458,6 @@ input[type="radio"]:checked ~ span {
 .delivery {
   margin: 0 5%;
   gap: 3px;
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "name name . . "
@@ -488,7 +488,6 @@ input[type="radio"]:checked ~ span {
 }
 .short {
   grid-area: small;
-  display: flex;
   flex-direction: column;
   row-gap: 3px;
 }
@@ -501,7 +500,6 @@ input[type="radio"]:checked ~ span {
 /* checkout complete */
 #checkout-complete {
   max-width: 100%;
-  display: flex;
   flex-direction: column;
   align-items: center;
   margin: 30px 0;
@@ -511,12 +509,10 @@ input[type="radio"]:checked ~ span {
   max-height: 200px;
 }
 #complete-info {
-  display: flex;
   flex-direction: column;
   text-align: center;
 }
 #complete-info button {
-  display: flex;
   align-items: center;
   gap: 5px;
   background-color: transparent;
@@ -636,7 +632,6 @@ input[type="radio"]:checked ~ span {
   }
   /* making the layout for big screens */
   main {
-    display: grid;
     grid-template-columns: 50px auto auto auto auto auto auto 50px;
     grid-template-areas:
       ". col col col best best best ."
@@ -667,7 +662,6 @@ input[type="radio"]:checked ~ span {
     top: 15%;
   }
   .featured {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     grid-gap: 10%;
@@ -684,7 +678,7 @@ input[type="radio"]:checked ~ span {
     grid-row: 1/2;
     grid-column: 1/4;
   }
-  /*needs styling here because is not visivle on mobile */
+  /*needs styling here because is not visible on mobile */
   .hidden {
     display: flex;
     flex-direction: column;
@@ -732,12 +726,13 @@ input[type="radio"]:checked ~ span {
     flex-direction: column;
     margin-bottom: 150px;
   }
+  /*remove flex */
   .buttons {
     display: flex;
   }
   .products {
-    background-color: transparent;
     display: grid;
+    background-color: transparent;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 5%;
     align-content: space-between;
@@ -779,7 +774,6 @@ input[type="radio"]:checked ~ span {
     background-color: #f5f5f5;
     border: solid 1px black;
     grid-column: 2/4;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 0.5fr 1fr 1fr 1fr;
     grid-template-areas:
       "image image image . name name name"
@@ -934,12 +928,10 @@ input[type="radio"]:checked ~ span {
   }
   /* contact */
   #contact {
-    display: flex;
     gap: 20px;
     flex-direction: column;
   }
   #contact-us {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: #f5f5f5;
     align-items: center;
@@ -960,7 +952,6 @@ input[type="radio"]:checked ~ span {
   }
   #find-us {
     background-color: #f5f5f5;
-    display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;

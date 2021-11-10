@@ -42,7 +42,7 @@
     </header>
     <main id="checkout">
         <h1>Checkout</h1>
-        <div class="product-banner">
+        <div class="product-banner flex">
             <img src="images/jakke1.png" alt="Small picture of a two collored jacket">
             <p>Product one</p>
             <img src="images/sizem.svg">
@@ -52,12 +52,12 @@
         </div>
         <article>
             <h2>Card information</h2>
-            <form class="card">
+            <form class="card grid">
                 <input type="text" id="cardname" placeholder="Name on card">
                 <input type="number" id="cardnumber" placeholder="card number">
                 <input type="number" id="expired" placeholder="expired">
                 <input type="number" id="cvv" placeholder="cvv">
-                <div class="save">
+                <div class="save flex">
                 <input type="checkbox" id="save">
                 <label>
                     Save card info
@@ -68,12 +68,12 @@
         <article>
             <!--remember to add link to form..-->
             <h2>Delivery information</h2>
-            <form class="delivery" action="/checkout-complete.html">
+            <form class="delivery grid" action="/checkout-complete.html">
                 <input type="text" id="name" placeholder="Recivers name">
                 <input type="email" id="email" placeholder="Recivers Email">
                 <label>*to send reciept</label>
                 <input type="text" id="adress" placeholder="Adress">
-                <div class="short">
+                <div class="short flex">
                     <input type="number" id="zip" placeholder="Zip">
                     <input type="text" id="city" placeholder="City">
                 </div>
