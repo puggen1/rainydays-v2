@@ -536,6 +536,9 @@ input[type="radio"]:checked ~ span {
 }
 */
 /* contact */
+#contact {
+  flex-direction: column;
+}
 #contact-us article {
   border-top: 1px solid #67dffb;
   border-bottom: 1px solid #67dffb;
@@ -547,6 +550,9 @@ input[type="radio"]:checked ~ span {
   border-color: black;
   border-radius: 0px;
   color: black;
+}
+#find-us p {
+  padding-right: 20px;
 }
 /*for bigger screens, with these two types, the site works well on smaller mobile devices,
  and laptops to desktops. sizes in the middel(just over 600px, should have one more version
@@ -910,7 +916,7 @@ input[type="radio"]:checked ~ span {
   }
   /*about us */
   #about-us {
-    grid-template-columns: 0.5fr 1fr;
+    grid-template-columns: 0.7fr 1fr;
     grid-template-areas:
       "about image1"
       "goal image2";
@@ -926,6 +932,10 @@ input[type="radio"]:checked ~ span {
   }
   #goal-img {
     grid-area: image2;
+  }
+  #about-us p {
+    max-width: 500px;
+    margin: 0 auto;
   }
   /* contact */
   #contact {
@@ -945,7 +955,7 @@ input[type="radio"]:checked ~ span {
     border: none;
   }
 
-  #contacy-us img {
+  #contact-us img {
     grid-column: 2/3;
   }
   #contact .hidden {
@@ -956,5 +966,8 @@ input[type="radio"]:checked ~ span {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
+  }
+  #find-us p {
+    max-width: 400px;
   }
 }
