@@ -44,9 +44,7 @@ a {
   font-size: 4vw;
   padding: 5px 10px;
 }
-.buy a,
-.price-cta a,
-#checkout button {
+.green {
   border: solid 2px #01b844;
   background-color: #01b844;
   color: white;
@@ -143,6 +141,7 @@ nav a {
 .bestseller {
   position: relative;
 }
+/*all img rules, might need to put it back in each category */
 .collection img,
 .bestseller img,
 .products img,
@@ -152,6 +151,24 @@ nav a {
   max-height: 100%;
   height: 100%;
   width: 100%;
+}
+.small img {
+  max-height: 80%;
+  max-width: 80%;
+  background-color: #009788;
+}
+.featured img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+.product-banner img {
+  width: 10%;
+  height: 10%;
+}
+#checkout-complete img {
+  max-width: 200px;
+  max-height: 200px;
 }
 
 /* splitting the content into top and bottom to give them diffrent top value*/
@@ -193,27 +210,18 @@ nav a {
   margin: 0;
 }
 .text-box {
+  display: flex;
   font-size: 4vw;
+  text-align: center;
 }
 .price {
   margin-left: 15px;
-}
-
-.featured img {
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
 }
 /* small image for jacket see also */
 .small {
   display: contents;
 }
-.small img {
-  max-height: 80%;
-  max-width: 80%;
 
-  background-color: #009788;
-}
 .box {
   flex-direction: column;
   align-items: center;
@@ -405,10 +413,6 @@ input[type="radio"]:checked ~ span {
   background-color: #f68c64;
 }
 /*checkout page */
-.product-banner img {
-  width: 10%;
-  height: 10%;
-}
 .product-banner {
   padding: 5px 20px;
   justify-content: space-between;
@@ -504,10 +508,6 @@ input[type="radio"]:checked ~ span {
   align-items: center;
   margin: 30px 0;
 }
-#checkout-complete img {
-  max-width: 200px;
-  max-height: 200px;
-}
 #complete-info {
   flex-direction: column;
   text-align: center;
@@ -566,9 +566,7 @@ input[type="radio"]:checked ~ span {
     color: white;
     background-color: #009788;
   }
-  .buy a:hover,
-  .price-cta a:hover,
-  #checkout button:hover {
+  .green:hover {
     background-color: #01b844;
   }
   p,
@@ -630,6 +628,20 @@ input[type="radio"]:checked ~ span {
   .cart {
     margin-left: 100px;
   }
+  /* all img rules for pc, might need to edit */
+  .collection img,
+  .bestseller img {
+    width: 100%;
+    height: 100%;
+  }
+  .jacket img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  .product-banner img {
+    max-height: 80px;
+    max-width: 80px;
+  }
   /* making the layout for big screens */
   main {
     grid-template-columns: 50px auto auto auto auto auto auto 50px;
@@ -648,11 +660,6 @@ input[type="radio"]:checked ~ span {
   .collection,
   .bestseller {
     max-width: 100%;
-  }
-  .collection img,
-  .bestseller img {
-    width: 100%;
-    height: 100%;
   }
   /* content on collection and bestseller moved */
   .content-top {
@@ -688,7 +695,6 @@ input[type="radio"]:checked ~ span {
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding-bottom: 10px;
-    max-width: 100%;
   }
 
   .color-box {
@@ -729,6 +735,7 @@ input[type="radio"]:checked ~ span {
   /*remove flex */
   .buttons {
     display: flex;
+    gap: 10px;
   }
   .products {
     display: grid;
@@ -782,10 +789,7 @@ input[type="radio"]:checked ~ span {
       "image image image . info info info"
       "image image image . cta cta cta";
   }
-  .jacket img {
-    max-width: 80%;
-    max-height: 80%;
-  }
+
   .jacket .box {
     grid-area: image;
     border-radius: 0px;
@@ -846,10 +850,7 @@ input[type="radio"]:checked ~ span {
     box-sizing: border-box;
     max-height: 100px;
   }
-  .product-banner img {
-    max-height: 80px;
-    max-width: 80px;
-  }
+
   #checkout {
     gap: 50px;
     display: flex;
