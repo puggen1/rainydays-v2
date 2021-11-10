@@ -554,6 +554,17 @@ input[type="radio"]:checked ~ span {
 #find-us p {
   padding-right: 20px;
 }
+#cart {
+  align-items: center;
+  flex-direction: column;
+}
+#cart .button {
+  margin-top: 150px;
+  flex-direction: column;
+}
+#cart .button .cta {
+  margin: 20px;
+}
 /*for bigger screens, with these two types, the site works well on smaller mobile devices,
  and laptops to desktops. sizes in the middel(just over 600px, should have one more version
   because some elements gets broken, i will not make tablet version here*/
@@ -969,5 +980,10 @@ input[type="radio"]:checked ~ span {
   }
   #find-us p {
     max-width: 400px;
+  }
+  /* cart */
+  #cart .button {
+    margin-top: 400px;
+    margin-bottom: 50px;
   }
 }
