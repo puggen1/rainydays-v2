@@ -15,6 +15,16 @@ button {
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
+h1 {
+  font-weight: 700;
+}
+/*making the h2 a little bit smaller since it is just as big as h1 and confuses me sometimes, except first h2 on homepage(the one on the picture*/
+h2 {
+  font-size: 1em;
+}
+.content-top h2 {
+  font-size: 1.5em;
+}
 h3,
 button {
   font-weight: 600;
@@ -135,6 +145,12 @@ nav a {
 .cart {
   margin-left: 10px;
 }
+.cart a {
+  background-color: transparent;
+  color: #000;
+  border: none;
+  box-shadow: none;
+}
 
 /* collection and bestseller*/
 /* added grid on the elements to get rid of a white underline i was struggling with */
@@ -164,8 +180,8 @@ nav a {
   width: 100%;
 }
 .product-banner img {
-  width: 10%;
-  height: 10%;
+  max-width: 50px;
+  max-height: 50px;
 }
 #checkout-complete img {
   max-width: 200px;
@@ -504,7 +520,6 @@ input[type="radio"]:checked ~ span {
 .delivery button {
   grid-area: order;
   padding: 10px 25px;
-  width: 40%;
   margin: 0 auto;
 }
 /* checkout complete */
@@ -563,6 +578,9 @@ input[type="radio"]:checked ~ span {
 #cart {
   align-items: center;
   flex-direction: column;
+  max-width: 75%;
+  margin: 0 auto;
+  background-color: #f5f5f5;
 }
 #cart .button {
   margin-top: 150px;
@@ -650,6 +668,9 @@ input[type="radio"]:checked ~ span {
 
   .cart {
     margin-left: 100px;
+  }
+  .cart a:hover {
+    background-color: transparent;
   }
   /* all img rules for pc, might need to edit */
   .collection img,
