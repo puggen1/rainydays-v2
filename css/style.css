@@ -44,16 +44,19 @@ footer,
   display: flex;
 }
 a {
-  background: #f68c64;
-  border: 2px solid #f68c64;
+  text-decoration: none;
+  color: #000;
+  border-radius: 25px;
   box-sizing: border-box;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
-  border-radius: 25px;
-  text-decoration: none;
-  color: #383838;
-  font-weight: 600;
   font-size: 4vw;
   padding: 5px 10px;
+  font-weight: 600;
+}
+.orange {
+  background: #f68c64;
+  border: 2px solid #f68c64;
+  color: #383838;
 }
 .green {
   border: solid 2px #01b844;
@@ -135,9 +138,7 @@ nav a {
   border: none;
   box-shadow: none;
 }
-.logo a:hover {
-  background-color: transparent;
-}
+
 #right-header {
   display: flex;
   align-items: center;
@@ -206,10 +207,11 @@ nav a {
   transform: translate(-50%, -50%);
 }
 /* added collection.html's bot text here also */
-.collection a,
-.bestseller a,
-.bot-text a {
-  padding: 7px 30px;
+.small-padding {
+  padding: 7px 20px;
+}
+.big-padding {
+  padding: 10px 30px;
 }
 /*featured*/
 .featured {
@@ -337,10 +339,6 @@ input[type="email"]:focus {
   padding: 20px;
   border-bottom: solid 1px #67dffb;
 }
-/*make the collection site  buttons a little bit bigger */
-.products a {
-  padding: 5px 30px;
-}
 .buy {
   display: none;
 }
@@ -372,8 +370,7 @@ input[type="email"]:focus {
   grid-row: 1/2;
   align-self: flex-start;
 }
-.cta a,
-.buy a {
+.medium-padding {
   padding: 10px 30px;
 }
 .jacket-info p {
@@ -432,10 +429,12 @@ input[type="radio"]:checked ~ span {
 /*checkout page */
 .product-banner {
   padding: 5px 20px;
+  margin: 0 auto;
   justify-content: space-between;
   border-top: solid 1px #67dffb;
   border-bottom: solid 1px #67dffb;
   align-items: center;
+  width: 75%;
 }
 .product-banner i {
   font-size: 30px;
@@ -519,7 +518,6 @@ input[type="radio"]:checked ~ span {
 }
 .delivery button {
   grid-area: order;
-  padding: 10px 25px;
   margin: 0 auto;
 }
 /* checkout complete */
@@ -578,9 +576,7 @@ input[type="radio"]:checked ~ span {
 #cart {
   align-items: center;
   flex-direction: column;
-  max-width: 75%;
   margin: 0 auto;
-  background-color: #f5f5f5;
 }
 #cart .button {
   margin-top: 150px;
@@ -600,7 +596,7 @@ input[type="radio"]:checked ~ span {
     background-color: rgba(255, 255, 255, 0);
     color: #383838;
   }
-  a:hover {
+  .orange:hover {
     background-color: #f68c64;
   }
   nav a:hover {
@@ -669,9 +665,7 @@ input[type="radio"]:checked ~ span {
   .cart {
     margin-left: 100px;
   }
-  .cart a:hover {
-    background-color: transparent;
-  }
+
   /* all img rules for pc, might need to edit */
   .collection img,
   .bestseller img {
@@ -893,6 +887,7 @@ input[type="radio"]:checked ~ span {
   .product-banner {
     box-sizing: border-box;
     max-height: 100px;
+    border: solid 2px #67dffb;
   }
 
   #checkout {
@@ -905,10 +900,7 @@ input[type="radio"]:checked ~ span {
     margin: 0 auto;
     margin-bottom: 25px;
   }
-  .product-banner {
-    width: 75%;
-    border: solid 2px #67dffb;
-  }
+
   #checkout article {
     max-width: 100%;
     width: 100%;
@@ -1013,6 +1005,10 @@ input[type="radio"]:checked ~ span {
     max-width: 400px;
   }
   /* cart */
+  #cart {
+    max-width: 75%;
+    background-color: #f5f5f5;
+  }
   #cart .button {
     margin-top: 400px;
     margin-bottom: 50px;
