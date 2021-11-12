@@ -776,20 +776,22 @@ input[type="radio"]:checked ~ span {
   #collection {
     display: flex;
     flex-direction: column;
+    max-width: 75%;
+    margin: 0 auto;
   }
   /*remove flex */
   .buttons {
-    display: flex;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   .products {
     display: grid;
     background-color: transparent;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 5%;
+    gap: 3%;
     align-content: space-between;
     margin: 30px;
-    margin-bottom: 150px;
+    margin-bottom: 180px;
   }
   .products .box {
     background-color: white;
@@ -798,18 +800,11 @@ input[type="radio"]:checked ~ span {
     padding-bottom: 10px;
     max-width: 100%;
   }
-  .proucts .text-box {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "name price"
-      "cta add";
-  }
 
   .buy,
   .cta {
     display: inline;
     box-sizing: border-box;
-    grid-area: add;
     height: auto;
   }
 
