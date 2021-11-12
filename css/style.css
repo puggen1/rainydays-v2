@@ -167,7 +167,8 @@ nav a {
 .bestseller img,
 .products img,
 #about-us img,
-#contact img {
+#contact img,
+.box img {
   max-width: 100%;
   max-height: 100%;
   height: 100%;
