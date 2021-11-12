@@ -968,6 +968,12 @@ input[type="radio"]:checked ~ span {
     grid-template-areas:
       "about image1"
       "goal image2";
+    row-gap: 20px;
+  }
+  #about,
+  #our-goal {
+    padding: 25% 0;
+    background-color: #fbfbfb;
   }
   #about {
     grid-area: about;
