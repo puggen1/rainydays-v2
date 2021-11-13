@@ -604,24 +604,23 @@ input[type="radio"]:checked ~ span {
   because some elements gets broken, i will not make tablet version here*/
 @media screen and (min-width: 600px) {
   /*making the a buttons more responsive on a pc with mouse */
-  a,
-  .cta a,
-  .buy a {
+  a {
     background-color: rgba(255, 255, 255, 0);
     color: #383838;
   }
+
   .orange {
-    background-color: transparent;
+    background-color: #f68c64;
   }
   .orange:hover {
-    background-color: #f68c64;
+    background-color: transparent;
   }
   nav a:hover {
     color: white;
     background-color: #009788;
   }
   .green:hover {
-    background-color: #01b844;
+    background-color: transparent;
   }
   p,
   a {
@@ -1032,7 +1031,7 @@ input[type="radio"]:checked ~ span {
   /* cart */
   #cart {
     max-width: 75%;
-    background-color: #f5f5f5;
+    background-color: #fbfbfb;
   }
   #cart .button {
     margin-top: 300px;
