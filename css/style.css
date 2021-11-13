@@ -56,12 +56,10 @@ a {
 .orange {
   background: #f68c64;
   border: 2px solid #f68c64;
-  color: #383838;
 }
 .green {
   border: solid 2px #01b844;
   background-color: #01b844;
-  color: #383838;
 }
 .green,
 .orange {
@@ -74,6 +72,15 @@ label {
 }
 ::placeholder {
   font-size: 1.2vh;
+}
+.small-padding {
+  padding: 7px 20px;
+}
+.medium-padding {
+  padding: 10px 30px;
+}
+.big-padding {
+  padding: 10px 30px;
 }
 
 /* all header styling */
@@ -175,8 +182,6 @@ nav a {
   width: 100%;
 }
 .small img {
-  max-height: 80%;
-  max-width: 80%;
   background-color: #009788;
 }
 .featured img {
@@ -211,12 +216,7 @@ nav a {
   transform: translate(-50%, -50%);
 }
 /* added collection.html's bot text here also */
-.small-padding {
-  padding: 7px 20px;
-}
-.big-padding {
-  padding: 10px 30px;
-}
+
 /*featured*/
 .featured {
   grid-template-columns: 1fr 1fr;
@@ -379,9 +379,6 @@ input[type="email"]:focus {
   grid-column: 1/2;
   grid-row: 2/3;
   align-self: flex-start;
-}
-.medium-padding {
-  padding: 10px 30px;
 }
 .jacket-info p {
   margin: 0 auto;
@@ -577,7 +574,6 @@ input[type="radio"]:checked ~ span {
   padding-bottom: 10px;
 }
 #contact-us article a {
-  background-color: transparent;
   border: solid 1px black;
   border-radius: 0px;
   color: black;
@@ -605,12 +601,7 @@ input[type="radio"]:checked ~ span {
 @media screen and (min-width: 600px) {
   /*making the a buttons more responsive on a pc with mouse */
   a {
-    background-color: rgba(255, 255, 255, 0);
     color: #383838;
-  }
-
-  .orange {
-    background-color: #f68c64;
   }
   .orange:hover {
     background-color: transparent;
@@ -683,11 +674,6 @@ input[type="radio"]:checked ~ span {
   }
 
   /* all img rules for pc, might need to edit */
-  .collection img,
-  .bestseller img {
-    width: 100%;
-    height: 100%;
-  }
   .jacket img {
     max-width: 80%;
     max-height: 80%;
@@ -695,6 +681,7 @@ input[type="radio"]:checked ~ span {
   .product-banner img {
     max-height: 80px;
     max-width: 80px;
+    height: 50px;
   }
   /* making the layout for big screens */
   main {
@@ -806,14 +793,12 @@ input[type="radio"]:checked ~ span {
     padding: 0px;
     border-bottom: unset;
     padding-bottom: 10px;
-    max-width: 100%;
   }
 
   .buy,
   .cta {
     display: inline;
     box-sizing: border-box;
-    height: auto;
   }
 
   /*jacket site using grid area */
@@ -859,7 +844,6 @@ input[type="radio"]:checked ~ span {
   }
   .jacket .price-cta {
     grid-area: cta;
-    row-gap: 0;
     padding: 0;
   }
   #jacket .featured {
@@ -922,8 +906,6 @@ input[type="radio"]:checked ~ span {
   }
   #checkout input {
     background-color: #fbfbfb;
-    width: 100%;
-    box-sizing: border-box;
     margin: 0;
   }
   #checkout #save {
@@ -1023,6 +1005,14 @@ input[type="radio"]:checked ~ span {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
+  }
+  /*because of iphone error image are the wrong way on mobile and need to fix it again on pc */
+  #find-us section {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  #find-us div {
+    grid-column: 2/3;
   }
   #find-us p {
     max-width: 400px;
