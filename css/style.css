@@ -726,8 +726,8 @@ input[type="radio"]:checked ~ span {
     grid-gap: 10%;
     /*padding on bottom already set to right number on mobile */
     padding-top: 40px;
-    padding-left: 130px;
-    padding-right: 130px;
+    padding-left: 180px;
+    padding-right: 180px;
     margin-top: 40px;
     grid-area: feat;
     border-top: solid 1px #67dffb;
