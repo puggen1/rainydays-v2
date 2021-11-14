@@ -224,7 +224,7 @@ nav a {
   grid-template-columns: 1fr 1fr;
   border-bottom: solid 1px #67dffb;
   padding-bottom: 40px;
-  column-gap: 2px;
+  column-gap: 1px;
 }
 
 .color-box {
