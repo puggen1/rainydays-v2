@@ -388,8 +388,6 @@ input[type="email"]:focus {
 }
 .jacket-info p {
   margin: 0 auto;
-  padding: 0px 20px;
-  max-width: 400px;
 }
 /* buttons on jacket site*/
 input[type="radio"] {
