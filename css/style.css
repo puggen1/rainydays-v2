@@ -345,7 +345,6 @@ input[type="email"]:focus {
 .products {
   display: flex;
   flex-direction: column;
-  background-color: #009788;
 }
 /* *collection* to put the cta and price on same line*/
 
