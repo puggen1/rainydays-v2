@@ -563,7 +563,7 @@ input[type="radio"]:checked ~ span {
   position: relative;
 }
 #about-us p {
-  padding: 5px 10px;
+  padding: 5px 25px;
 }
 /* unsure about this 
 #about-us .content-top {
