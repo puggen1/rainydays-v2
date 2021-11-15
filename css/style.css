@@ -590,8 +590,8 @@ input[type="radio"]:checked ~ span {
 #cart .button .cta {
   margin: 20px;
 }
-/*for bigger screens, with these two types, the site works well on smaller mobile devices,
- and laptops to desktops. sizes in the middel, the only difference between this and  next media queries is that some index elements messes up when on 600-800 px*/
+/*for 600-800px screens(tablet),
+ but most rules here is also for laptop and desktops. this was an late and quick fix aimed to fix some small grid problems on this size*/
 @media screen and (min-width: 600px) {
   /*making the a buttons more responsive on a pc with mouse */
   .orange:hover {
@@ -1033,6 +1033,8 @@ input[type="radio"]:checked ~ span {
     margin-bottom: 50px;
   }
 }
+/* late call to make some elements suitable for tablet,
+ so this is the spesified rules for over 800px, not so much changed here, just grid elements and gap. */
 @media screen and (min-width: 800px) {
   header {
     grid-template-columns: 0.5fr 2fr 1fr 1fr;
