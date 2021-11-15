@@ -610,7 +610,7 @@ input[type="radio"]:checked ~ span {
 @media screen and (min-width: 600px) {
   /*making the a buttons more responsive on a pc with mouse */
   a {
-    color: #383838;
+    color: #363636;
   }
   .orange:hover {
     background-color: transparent;
