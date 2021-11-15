@@ -678,13 +678,14 @@ input[type="radio"]:checked ~ span {
   }
   #search {
     display: block;
+    height: 30px;
     border: solid 1px black;
     padding: 5px 2px 2px 5px;
     background-color: #009788;
   }
   #search:focus {
     outline: none;
-    background-color: lightgray;
+    background-color: white;
   }
 
   /* all img rules for pc, might need to edit */
