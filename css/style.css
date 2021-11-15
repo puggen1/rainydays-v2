@@ -29,7 +29,9 @@ h3,
 button {
   font-weight: 600;
 }
-
+.underline {
+  text-decoration: underline;
+}
 /*^grouping all elements that needs the same display:grid or flex. except the elements in header or footer or some items found many places.
 it was tricky with elements that had diffrent display on mobile and desktop so removed those
 */
@@ -45,7 +47,7 @@ footer,
 }
 a {
   text-decoration: none;
-  color: #000;
+  color: #363636;
   border-radius: 25px;
   box-sizing: border-box;
   font-size: 4vw;
@@ -163,6 +165,7 @@ nav a {
   color: #000;
   border: none;
   box-shadow: none;
+  flex-direction: column;
 }
 
 /* collection and bestseller*/
@@ -609,9 +612,7 @@ input[type="radio"]:checked ~ span {
   because some elements gets broken, i will not make tablet version here*/
 @media screen and (min-width: 600px) {
   /*making the a buttons more responsive on a pc with mouse */
-  a {
-    color: #363636;
-  }
+
   .orange:hover {
     background-color: transparent;
   }
@@ -625,6 +626,13 @@ input[type="radio"]:checked ~ span {
   p,
   a {
     font-size: 1vw;
+  }
+  /*only underline on pc when hover */
+  .underline {
+    text-decoration: none;
+  }
+  .underline:hover {
+    text-decoration: underline;
   }
   button:hover,
   #right-header label:hover,
@@ -685,6 +693,9 @@ input[type="radio"]:checked ~ span {
   }
   #search:focus {
     outline: none;
+    background-color: white;
+  }
+  .cart a:hover {
     background-color: white;
   }
 
