@@ -590,8 +590,7 @@ input[type="radio"]:checked ~ span {
   margin: 20px;
 }
 /*for bigger screens, with these two types, the site works well on smaller mobile devices,
- and laptops to desktops. sizes in the middel(just over 600px, should have one more version
-  because some elements gets broken, i will not make tablet version here*/
+ and laptops to desktops. sizes in the middel, the only difference between this and  next media queries is that some index elements messes up when on 600-800 px*/
 @media screen and (min-width: 600px) {
   /*making the a buttons more responsive on a pc with mouse */
   .orange:hover {
@@ -627,7 +626,7 @@ input[type="radio"]:checked ~ span {
     display: none;
   }
   header {
-    grid-template-columns: 0.5fr 2fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
     grid-template-rows: 10px auto 10px;
     grid-template-areas:
       "logo . . ."
@@ -692,11 +691,11 @@ input[type="radio"]:checked ~ span {
   }
   /* making the layout for big screen front page*/
   main {
-    grid-template-columns: 50px auto auto auto auto auto auto 50px;
+    grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr 1fr 50px;
     grid-template-areas:
       ". col col col best best best ."
       ". feat feat feat feat feat feat ."
-      ". . . about about . . .";
+      ". . about about about about . .";
   }
   .collection {
     grid-area: col;
@@ -713,13 +712,13 @@ input[type="radio"]:checked ~ span {
     top: 15%;
   }
   .featured {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     grid-gap: 10%;
     /*padding on bottom already set to right number on mobile */
     padding-top: 40px;
-    padding-left: 180px;
-    padding-right: 180px;
+    padding-left: 120px;
+    padding-right: 120px;
     margin-top: 40px;
     grid-area: feat;
     border-top: solid 1px #67dffb;
@@ -730,11 +729,7 @@ input[type="radio"]:checked ~ span {
     grid-column: 1/4;
   }
   /*needs styling here because is not visible on mobile */
-  .hidden {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+
   .box {
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -786,7 +781,7 @@ input[type="radio"]:checked ~ span {
   .products {
     display: grid;
     background-color: transparent;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 3%;
     align-content: space-between;
     margin: 30px;
@@ -809,7 +804,7 @@ input[type="radio"]:checked ~ span {
 
   /*custom main id to edit the layout */
   #jacket {
-    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
     grid-template-areas:
       ". maincontent maincontent ."
       ". featured featured .";
@@ -947,7 +942,7 @@ input[type="radio"]:checked ~ span {
   }
   .short {
     flex-direction: row;
-    column-gap: 50px;
+    column-gap: 10px;
   }
   /*about us */
   #about-us {
@@ -1004,6 +999,7 @@ input[type="radio"]:checked ~ span {
   }
   #contact .hidden {
     border-radius: 0px;
+    display: block;
   }
   #find-us {
     grid-template-columns: 1fr 1fr;
@@ -1034,5 +1030,34 @@ input[type="radio"]:checked ~ span {
   #cart .button {
     margin-top: 300px;
     margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 800px) {
+  header {
+    grid-template-columns: 0.5fr 2fr 1fr 1fr;
+  }
+  main {
+    grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr 1fr 50px;
+    grid-template-areas:
+      ". col col col best best best ."
+      ". feat feat feat feat feat feat ."
+      ". . . about about . . .";
+  }
+  .featured {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .hidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .products {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  #jacket {
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+  }
+  .short {
+    column-gap: 50px;
   }
 }
