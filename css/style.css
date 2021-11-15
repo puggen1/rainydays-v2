@@ -350,6 +350,7 @@ input[type="email"]:focus {
 /*setting right grid on jacket*/
 #jacket .featured {
   grid-template-rows: auto auto;
+  grid-gap: 0px;
 }
 #jacket h3 {
   grid-row: 1/2;
@@ -714,13 +715,13 @@ input[type="radio"]:checked ~ span {
   .featured {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    grid-gap: 10%;
     /*padding on bottom already set to right number on mobile */
     padding-top: 40px;
     padding-left: 120px;
     padding-right: 120px;
     margin-top: 40px;
     grid-area: feat;
+    grid-gap: 10%;
     border-top: solid 1px #67dffb;
   }
   .featured h3,
@@ -1045,6 +1046,9 @@ input[type="radio"]:checked ~ span {
   }
   .featured {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  #jacket .featured {
+    grid-gap: 10%;
   }
   .hidden {
     display: flex;
