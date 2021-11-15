@@ -11,7 +11,6 @@ h1,
 h2,
 h3,
 button {
-  /*might add label here, but need to do some tweaking on things then */
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
@@ -32,8 +31,8 @@ button {
 .underline {
   text-decoration: underline;
 }
-/*^grouping all elements that needs the same display:grid or flex. except the elements in header or footer or some items found many places.
-it was tricky with elements that had diffrent display on mobile and desktop so removed those
+/*grouping all elements that needs the same display:grid or flex. except the elements in header or footer or some items found many places.
+it was tricky with elements that had different display on mobile and desktop so removed those
 */
 header,
 main,
@@ -143,13 +142,6 @@ nav a {
   max-width: 80%;
   max-height: 81px;
 }
-/* makes the logo not have the a attributes on the other elements */
-.logo a {
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-}
-
 #right-header {
   display: flex;
   align-items: center;
@@ -169,12 +161,11 @@ nav a {
 }
 
 /* collection and bestseller*/
-/* added grid on the elements to get rid of a white underline i was struggling with */
 .collection,
 .bestseller {
   position: relative;
 }
-/*all img rules, might need to put it back in each category */
+/*all img rules, it might be uneccesary with all these, but sometimes they change size when not specified inside another element */
 .collection img,
 .bestseller img,
 .products img,
@@ -190,8 +181,6 @@ nav a {
   background-color: #009788;
 }
 .featured img {
-  /*max-width: 100%;
-  max-height: 100%; */
   width: 90%;
 }
 .product-banner img {
@@ -220,7 +209,6 @@ nav a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* added collection.html's bot text here also */
 
 /*featured*/
 .featured {
@@ -501,6 +489,7 @@ input[type="radio"]:checked ~ span {
 .card label {
   grid-area: lab;
 }
+/*grid and area for second form */
 .delivery {
   margin: 0 5%;
   gap: 3px;
@@ -568,14 +557,7 @@ input[type="radio"]:checked ~ span {
 #about-us p {
   padding: 5px 25px;
 }
-/* unsure about this 
-#about-us .content-top {
-  height: 10%;
-  width: 100%;
-  top: 15%;
-  
-}
-*/
+
 /* contact */
 #contact {
   flex-direction: column;
@@ -612,7 +594,6 @@ input[type="radio"]:checked ~ span {
   because some elements gets broken, i will not make tablet version here*/
 @media screen and (min-width: 600px) {
   /*making the a buttons more responsive on a pc with mouse */
-
   .orange:hover {
     background-color: transparent;
   }
@@ -699,7 +680,7 @@ input[type="radio"]:checked ~ span {
     background-color: white;
   }
 
-  /* all img rules for pc, might need to edit */
+  /* all img rules for pc*/
   .jacket img {
     max-width: 80%;
     max-height: 80%;
@@ -723,11 +704,7 @@ input[type="radio"]:checked ~ span {
   .bestseller {
     grid-area: best;
   }
-  /* making the image become the same size this makes collection image wrong ratio but it is not noticable here, if i find a better solution i will change */
-  .collection,
-  .bestseller {
-    max-width: 100%;
-  }
+
   /* content on collection and bestseller moved */
   .content-top {
     top: 5%;
